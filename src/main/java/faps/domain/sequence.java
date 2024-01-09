@@ -12,11 +12,10 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable;
 @PlanningEntity
 public class Sequence {
 
-    @PlanningVariable()
-    public Sequence sequence1;
+    @PlanningVariable(valueRangeProviderRefs="Sequence")
+    public Sequence Sequence;
 
-    @PlanningVariable()
-    public Sequence sequence2;
+    
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -54,7 +53,7 @@ public class Sequence {
 
     }
 
-    public static void setSequence(char[] Sequence) {
+    /*  public static void setSequence(char[] Sequence) {
         char[] sequence1 = Arrays.copyOfRange(Sequence, 0, Sequence.length/2);
         char[] sequence2 = Arrays.copyOfRange(Sequence, Sequence.length / 2, Sequence.length);
 
@@ -69,7 +68,7 @@ public class Sequence {
             System.out.print(k + " ");
         }
 
-        
+    */
         
 
 
