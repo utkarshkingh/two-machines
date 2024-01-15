@@ -14,7 +14,6 @@ public class Sequence {
 
     @PlanningVariable(valueRangeProviderRefs="Sequence")
     public Sequence Sequence;
-
     
 
     public static void main(String[] args) {

@@ -29,7 +29,8 @@ public class constraints implements ConstraintProvider {
 
     private Constraint minimizeMakespan(ConstraintFactory constraintFactory) {
         return constraintFactory.forEach(machines.class)
-                .join(machines.class, Joiners.equal((machine1, machine2) -> machine1, Function.identity()))
+        .penalize(BendableScore.ofSoft(BENDABLE_SCORE_HARD_LEVELS_SIZE, BENDABLE_SCORE_SOFT_LEVELS_SIZE, 1, 1),
+                //.join(machines.class, Joiners.equal((machine1, machine2) -> machine1, Function.identity()))
                 .groupBy((machine1, machine2) -> machine1)
                 .penalize("Minimize makespan", HardSoftScore.ONE_SOFT,
                         (machines1, machines2) -> calculateMakespanPenalty(machines1, machines2));
