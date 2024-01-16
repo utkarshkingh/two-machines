@@ -14,6 +14,8 @@ public class main {
         machines machine1= new machines("machine1",10,20,0.5f);
         machines machine2= new machines("machine2",12,24,0.5f);
 
+        
+
 
     
         

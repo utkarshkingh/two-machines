@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.lookup.PlanningId;
+import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
 
@@ -24,6 +25,7 @@ public class Sequence {
         String inputString = scanner.nextLine();
 
         // Create an array to store 'c' and 't'
+    
         char[] Sequence = new char[inputString.length()];
 
         // Fill the array with characters from the input string
@@ -46,8 +48,7 @@ public class Sequence {
         }
         System.out.println("");
 
-        setSequence(Sequence);
-
+        
         
 
     }
@@ -73,7 +74,6 @@ public class Sequence {
 
     }
     
-}
 
     
     
